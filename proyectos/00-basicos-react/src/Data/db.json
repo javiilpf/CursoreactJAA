@@ -1,79 +1,72 @@
-{
-    "usuarios": [
-        {
-            "username": "Maria Gomez",
-            "email": "maria.gomez@example.com",
-            "password": "maria1411"
-        },
-        {
-            "username": "Juan Perez",
-            "email": "juan.perez@example.com",
-            "password": "juan1234"
-        },
-        {
-            "username": "Carlos Sanchez",
-            "email": "carlos.sanchez@example.com",
-            "password": "carlos5678"
-        },
-        {
-            "username": "Ana Martinez",
-            "email": "ana.martinez@example.com",
-            "password": "ana91011"
-        },
-        {
-            "username": "Luis Fernandez",
-            "email": "luis.fernandez@example.com",
-            "password": "luis1213"
-        },
-        {
-            "username": "Laura Rodriguez",
-            "email": "laura.rodriguez@example.com",
-            "password": "laura1415"
-        },
-        {
-            "username": "David Lopez",
-            "email": "david.lopez@example.com",
-            "password": "david1617"
-        },
-        {
-            "username": "Sofia Gonzalez",
-            "email": "sofia.gonzalez@example.com",
-            "password": "sofia1819"
-        },
-        {
-            "username": "Miguel Torres",
-            "email": "miguel.torres@example.com",
-            "password": "miguel2021"
-        },
-        {
-            "username": "Isabel Ramirez",
-            "email": "isabel.ramirez@example.com",
-            "password": "isabel2223"
-        },
-        {
-            "username": "Pedro Diaz",
-            "email": "pedro.diaz@example.com",
-            "password": "pedro2425"
-        },
-        {
-            "username": "Carmen Morales",
-            "email": "carmen.morales@example.com",
-            "password": "carmen2627"
-        },
-        {
-            "username": "Jorge Ruiz",
-            "email": "jorge.ruiz@example.com",
-            "password": "jorge2829"
-        },
-        {
-            "username": "Elena Herrera",
-            "email": "elena.herrera@example.com",
-            "password": "elena3031"
-        },
-        {
-            "username": "Raul Castro",
-            "email": "raul.castro@example.com",
-            "password": "raul3233"
-        }
-    ]
-}
+[
+  {
+    "id": 1,
+    "name": "Clean Code",
+    "price": 29.99,
+    "tags": ["Java", "Software Engineering"],
+    "img": "https://example.com/clean-code.jpg"
+  },
+  {
+    "id": 2,
+    "name": "The Pragmatic Programmer",
+    "price": 34.99,
+    "tags": ["Software Engineering", "Best Practices"],
+    "img": "https://example.com/pragmatic-programmer.jpg"
+  },
+  {
+    "id": 3,
+    "name": "JavaScript: The Good Parts",
+    "price": 24.99,
+    "tags": ["JavaScript", "Web Development"],
+    "img": "https://example.com/javascript-good-parts.jpg"
+  },
+  {
+    "id": 4,
+    "name": "You Don't Know JS",
+    "price": 27.99,
+    "tags": ["JavaScript", "Web Development"],
+    "img": "https://example.com/you-dont-know-js.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Eloquent JavaScript",
+    "price": 22.99,
+    "tags": ["JavaScript", "Web Development"],
+    "img": "https://example.com/eloquent-javascript.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Python Crash Course",
+    "price": 31.99,
+    "tags": ["Python", "Programming"],
+    "img": "https://example.com/python-crash-course.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Learning Python",
+    "price": 39.99,
+    "tags": ["Python", "Programming"],
+    "img": "https://example.com/learning-python.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Effective Java",
+    "price": 36.99,
+    "tags": ["Java", "Software Engineering"],
+    "img": "https://example.com/effective-java.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Head First Design Patterns",
+    "price": 35.99,
+    "tags": ["Design Patterns", "Software Engineering"],
+    "img": "https://example.com/head-first-design-patterns.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Introduction to the Theory of Computation",
+    "price": 44.99,
+    "tags": ["Computer Science", "Theory"],
+    "img": "https://example.com/theory-of-computation.jpg"
+  }
+]

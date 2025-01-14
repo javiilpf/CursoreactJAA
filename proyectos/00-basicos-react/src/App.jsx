@@ -1,25 +1,36 @@
-// import Contador from "./components/UseState/Contador"
-// import ContadorDoble from "./components/UseState/ContadorDoble"
-// import GuitarHeroe from "./components/UseState/GuitarHeroe";
-import Padre from "./components/UseState/props/Padre";
-// import RegistrarFormulario from "./components/UseState/RegistrarFormulario"
-// import 'bootstrap/dist/css/bootstrap.min.css';
-
+import CardPlaceHolder from "./components/useEffectsCicloVida/CardPlaceHolder";
 
 const App = () => {
+  // const [contador, setContador] = useState(0);
+  // const handleClick = () => {
+  //   setContador((prevContador) => prevContador + 1);
+  // };
   return (
-    <>
-    {/* <div className="text-3xl font-bold underline">Hola mundo</div>
-    <Contador/>
-    <hr></hr>
-    <ContadorDoble/>
-    <hr></hr>
-    <RegistrarFormulario/>
-    <hr></hr>
-    <GuitarHeroe/> */}
-    <Padre/>
-    </>
-  )
-}
+    <div className="mx-auto bg-gray-200">
+      <div className="text-3xl font-bold underline">Hola mundo!!!</div>
+      {/* <Contador />
+      <hr className="mt-10" />
+      <ContadorDoble />
+      <hr className="mt-10" />
+      <ContinuacionNumeros />
+      <hr className="mt-10" />
+      <RegistrarFormulario />
+      <hr className="mt-10" />
+      <GuitarHeroe /> */}
+      {/* <hr className="mt-10" />
+      <Padre /> */}
+      {/* <hr className="mt-10" />
+      <p>{contador}</p>
+      <Padre2>
+        <Hijo2>
+          <Nieto2 handleClick={handleClick} />
+        </Hijo2>
+      </Padre2> */}
+      <hr className="mt-10" />
+      {/* <Timer /> */}
+      <CardPlaceHolder />
+    </div>
+  );
+};
 
-export default App
+export default App;

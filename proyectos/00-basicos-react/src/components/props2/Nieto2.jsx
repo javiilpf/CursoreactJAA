@@ -1,9 +1,8 @@
-function Nieto(props) {
-  const { counter, handleClick } = props;
-
+function Nieto2(props) {
+  const { handleClick } = props;
   return (
     <>
-      <div>Hola yo soy tu nieto</div>;<p>El contador vale {counter}</p>;
+      <div>Hola yo soy tu nieto</div>;{" "}
       <button
         onClick={handleClick}
         className="bg-green-600 rounded-lg text-white px-2 py-5 mb-5 mt-6 hover:bg-slate-900"
@@ -14,4 +13,4 @@ function Nieto(props) {
   );
 }
 
-export default Nieto;
+export default Nieto2;

@@ -1,17 +1,18 @@
-import { useState } from "react"
-import Hijo from "./Hijo"
+import { useState } from "react";
+import Hijo from "./Hijo";
 
 const Padre = () => {
-    const [counter, setCounter ]= useState(0)
+  const [counter, setCounter] = useState(0);
     const handleClick = () => {
-        setCounter((prevCounter) => prevCounter + 1);
-    }
+      setCounter((prevCounter) => prevCounter + 1);
+    };
   return (
     <>
-    <div>Hola soy tu Padre</div>
-    <Hijo counter={counter} setCounter={setCounter}/>
+      <div>Hola soy tu Padre</div>
+      <p>El contador vale {counter}</p>
+      <Hijo counter={counter} handleClick={handleClick} />
     </>
-  )
-}
+  );
+};
 
-export default Padre
+export default Padre;

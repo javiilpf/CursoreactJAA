@@ -1,20 +1,22 @@
-import Nieto from "./Nieto"
-
+import Nieto from "./Nieto";
 
 const Hijo = (props) => {
-    const {counter, handleClick}=props;
-    console.log(props)
-    const handleClick = () => {
-        setCounter((prevCounter) => prevCounter + 1);
-    }
+  console.log(props);
+  const { counter, handleClick } = props;
+
   return (
     <>
-    <div>Hola, yo soy ty hijo</div>
-    <p>El contador vale {counter}</p>
-    <button className="bg-slate-600 px-2 py-5 mb-5 mt-6" onClick={handleClick}>Aumento el contador desde el hijo</button>
-    <Nieto handleClick={handleClick} />
+      <div>Hola yo soy tu Hijo</div>
+      <p>El contador vale {counter}</p>
+      <button
+        onClick={handleClick}
+        className="bg-blue-600 rounded-lg text-white px-2 py-5 mb-5 mt-6 hover:bg-slate-900"
+      >
+        Aumento el contador desde el hijo
+      </button>
+      <Nieto counter={counter }handleClick={handleClick} />
     </>
-  )
-}
+  );
+};
 
-export default Hijo
+export default Hijo;

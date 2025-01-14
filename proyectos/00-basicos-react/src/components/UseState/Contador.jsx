@@ -1,27 +1,23 @@
-import { useState } from "react"
+import { useState } from "react";
 
 const Contador = () => {
-    // Espacio para declarar funciones
-    //--------------------Espacio para los hooks---------------------------
-    const [total, setTotal] = useState(0)
-    //--------------------Espacio para declarar funciones-------------------
-    
-    function handleClick(numero=1){
-        setTotal(total+numero)
-        console.log(total)
-        
-    }
+  // -------- espacio para los hooks-------------
+  const [total, setTotal] = useState(0)
+  // --------- espacio para declarar funciones ------------
+  function handleClick(numero=1) {
+    setTotal(total + numero)
+    console.log(total)
+  }
+
+
   return (
     <>
-        <div>Contador en react</div>
-        <h2>{total}</h2>
-
-        <button onClick={()=>handleClick(1)}>Incrementar</button>	
-        <button onClick={()=>handleClick(-1)}>Decrementar</button>
-
+      <h1>Contador en React</h1>
+      <h2>{total}</h2>
+      <button onClick={()=>handleClick(10)}>Incrementar</button>
+      <button onClick={()=>handleClick(-10)}>Decrementar</button>
     </>
-    
-  )
-}
+  );
+};
 
-export default Contador
+export default Contador;

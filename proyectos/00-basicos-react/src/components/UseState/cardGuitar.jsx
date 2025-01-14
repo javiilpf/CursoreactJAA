@@ -1,19 +1,25 @@
-import React from 'react'
+import guitarsolid from "../../assets/guitar-solid.svg";
 
-const CardGuitar = ({guitar}) => {
-    const {name, type, price, image} = guitar;
+const CardGuitar = ({ guitar }) => {
+  const { name, price, type } = guitar;
   return (
-    <>
-      <div className='flex items-center justify-between bg-white p-4 rounded-md shadow-md mt-4'>
-        <div>
-          <h2 className='text-lg font-bold'>{name}</h2>
-          <p className='text-sm text-gray-500'>{type}</p>
-          <p className='text-2xl text-gray-500'>{price}€</p>
-        </div>
-        <img src={`./assets/${image}`} alt={name} className='w-24 h-24'/>
+    <div
+      key={name}
+      className="bg-gray-100 border p-4 mt-4 rounded-lg shadow-md flex items-center"
+    >
+      <img
+        src={guitarsolid}
+        alt={name}
+        width={80}
+        className="w-20 h-20 object-cover rounded-md  ml-4 mr-10"
+      />
+      <div>
+        <h2 className="text-lg font-bold">{name}</h2>
+        <p className="text-sm text-gray-700">{type}</p>
+        <p className="text-xl font-bold text-gray-700">{price} €</p>
       </div>
-    </>
-  )
-}
+    </div>
+  );
+};
 
-export default CardGuitar
+export default CardGuitar;
