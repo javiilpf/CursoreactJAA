@@ -1,0 +1,79 @@
+{
+    "usuarios": [
+        {
+            "username": "Maria Gomez",
+            "email": "maria.gomez@example.com",
+            "password": "maria1411"
+        },
+        {
+            "username": "Juan Perez",
+            "email": "juan.perez@example.com",
+            "password": "juan1234"
+        },
+        {
+            "username": "Carlos Sanchez",
+            "email": "carlos.sanchez@example.com",
+            "password": "carlos5678"
+        },
+        {
+            "username": "Ana Martinez",
+            "email": "ana.martinez@example.com",
+            "password": "ana91011"
+        },
+        {
+            "username": "Luis Fernandez",
+            "email": "luis.fernandez@example.com",
+            "password": "luis1213"
+        },
+        {
+            "username": "Laura Rodriguez",
+            "email": "laura.rodriguez@example.com",
+            "password": "laura1415"
+        },
+        {
+            "username": "David Lopez",
+            "email": "david.lopez@example.com",
+            "password": "david1617"
+        },
+        {
+            "username": "Sofia Gonzalez",
+            "email": "sofia.gonzalez@example.com",
+            "password": "sofia1819"
+        },
+        {
+            "username": "Miguel Torres",
+            "email": "miguel.torres@example.com",
+            "password": "miguel2021"
+        },
+        {
+            "username": "Isabel Ramirez",
+            "email": "isabel.ramirez@example.com",
+            "password": "isabel2223"
+        },
+        {
+            "username": "Pedro Diaz",
+            "email": "pedro.diaz@example.com",
+            "password": "pedro2425"
+        },
+        {
+            "username": "Carmen Morales",
+            "email": "carmen.morales@example.com",
+            "password": "carmen2627"
+        },
+        {
+            "username": "Jorge Ruiz",
+            "email": "jorge.ruiz@example.com",
+            "password": "jorge2829"
+        },
+        {
+            "username": "Elena Herrera",
+            "email": "elena.herrera@example.com",
+            "password": "elena3031"
+        },
+        {
+            "username": "Raul Castro",
+            "email": "raul.castro@example.com",
+            "password": "raul3233"
+        }
+    ]
+}
