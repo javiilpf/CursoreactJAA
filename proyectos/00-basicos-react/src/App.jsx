@@ -1,4 +1,6 @@
-import CardPlaceHolder from "./components/useEffectsCicloVida/CardPlaceHolder";
+// import GestUser from "./components/gestUser/gestUser";
+import ProductList from "./components/useEffects/ProductList";
+// import CardPlaceHolder from "./components/useEffectsCicloVida/CardPlaceHolder";
 
 const App = () => {
   // const [contador, setContador] = useState(0);
@@ -26,9 +28,11 @@ const App = () => {
           <Nieto2 handleClick={handleClick} />
         </Hijo2>
       </Padre2> */}
-      <hr className="mt-10" />
+      {/* <hr className="mt-10" /> */}
       {/* <Timer /> */}
-      <CardPlaceHolder />
+      {/* <CardPlaceHolder/> */}
+      {/* <GestUser/> */}
+      <ProductList/>
     </div>
   );
 };

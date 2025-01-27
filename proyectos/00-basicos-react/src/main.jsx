@@ -8,3 +8,13 @@ createRoot(document.getElementById("root")).render(
     <App />
   // </StrictMode>
 );
+
+const main = () => {
+  return (
+    <main>
+      <h1>Main Content</h1>
+    </main>
+  )
+}
+
+export default main

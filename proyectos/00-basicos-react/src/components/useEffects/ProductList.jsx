@@ -25,7 +25,11 @@ const ProductList = () => {
 
 
   return (
-    <div>ProductList</div>
+    <div className="grid grid-cols-3 gap-4">
+      <h1>Lista de productos</h1>
+
+    </div>
+    
   )
 }
 
