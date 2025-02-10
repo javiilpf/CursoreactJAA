@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import MovieCard from "../components/MovieCard";
 import { useFetch } from "../hooks/useFetch";
 import { getPopularMovies } from "../services/tmdb";
+import Spinner from "../components/Spinner";
 
 const Home = () => {
   // estado para el número de página
@@ -49,7 +50,7 @@ const Home = () => {
           Películas Populares
         </h2>
         {loading ? (
-          <div> Cargando Películas...</div>
+          <div> (<Spinner/>)</div>
         ) : (
           <>
             {/* grid de las películas */}
@@ -71,7 +72,9 @@ const Home = () => {
               >
                 Anterior
               </button>
-              <span></span>
+              <span>
+                {page} / {data?.total_pages}
+              </span>
               <button
                 onClick={() => handlePageChange(page + 1)}
                 className="text-white px-4 py-2 rounded-lg transition-colors duration-200 bg-sky-800 hover:bg-sky-950"
