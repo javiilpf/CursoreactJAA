@@ -36,10 +36,9 @@ const Home = () => {
           <>
             grid de las películas
             <div className="grid grid-cols-2 md-grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-              {data?.results.map((movie)=>{
-                // aquí va el componente movieCard
-                <MovieCard key={movie.id} movie={movie}/>
-              })}
+              {data?.results.map((movie) => (
+                <MovieCard key={movie.id} movie={movie} />
+              ))}
             </div>
             <div className="flex justify-center gap-2">
               <button onClick={()=>handlePageChange(page-1)} disabled={page===1}

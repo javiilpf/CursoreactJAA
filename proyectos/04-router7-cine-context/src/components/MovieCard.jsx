@@ -1,12 +1,8 @@
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 import { Link } from "react-router-dom";
 import { getImageUrl } from "../services/tmdb";
 import { useFavorites } from "../context/FavoritesContext";
 
-const MovieCard = ({ movie }) => {
+const MovieCard = ({ movie, onRemove }) => {
   const { favorites, addToFavorites, removeFromFavorites } = useFavorites();
   const rating = movie.vote_average ? movie.vote_average.toFixed(1) : "N/A";
 
@@ -17,6 +13,7 @@ const MovieCard = ({ movie }) => {
 
     if (isFavorite) {
       removeFromFavorites(movie.id);
+      onRemove && onRemove();
     } else {
       addToFavorites(movie);
     }
