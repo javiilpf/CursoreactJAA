@@ -1,3 +1,7 @@
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 import { Link } from "react-router-dom";
 import { getImageUrl } from "../services/tmdb";
 import { useFavorites } from "../context/FavoritesContext";
