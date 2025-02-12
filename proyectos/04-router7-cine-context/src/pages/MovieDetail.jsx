@@ -1,11 +1,13 @@
 import { useParams } from "react-router-dom";
 import { getMovieDetails, getImageUrl, getMovieVideos } from "../services/tmdb";
 import { useEffect, useState } from "react";
+import ReviewForm from "../components/ReviewForm";
 
 const MovieDetail = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
   const [trailer, setTrailer] = useState(null);
+  const [reviews, setReviews] = useState([]);
 
   // Fetch movie details from tmdb api using movieID
   const fetchData = async () => {
@@ -13,14 +15,12 @@ const MovieDetail = () => {
       const result = await getMovieDetails(id);
       setMovie(result);
 
-      const trailerResult=await getMovieVideos(id);
-      if (trailerResult.results && trailerResult.results.length>0){
+      const trailerResult = await getMovieVideos(id);
+      if (trailerResult.results && trailerResult.results.length > 0) {
         setTrailer(trailerResult.results[0]);
-      }else{
-        console.log("No se encontró ningún trailer")
+      } else {
+        console.log("No se encontró ningún trailer");
       }
-      
-      
     } catch (error) {
       console.error(error);
     }
@@ -28,6 +28,12 @@ const MovieDetail = () => {
 
   useEffect(() => {
     fetchData();
+  }, [id]);
+
+  useEffect(() => {
+    const storedReviews = JSON.parse(localStorage.getItem("reviews")) || [];
+    const movieReviews = storedReviews.filter(review => review.movieId === id);
+    setReviews(movieReviews);
   }, [id]);
 
   if (!movie) return <p>Cargando...</p>;
@@ -38,9 +44,9 @@ const MovieDetail = () => {
       style={{ backgroundImage: `url(${getImageUrl(movie.backdrop_path)})` }}
     >
       <div className="bg-black bg-opacity-70 p-6 rounded-lg shadow-lg max-w-3xl mx-auto">
-      <div className="mb-2 top-2 left-2 bg-black bg-opacity-50 text-white py-1  px-2 rounded">
-            ❤️
-          </div>
+        <div className="mb-2 top-2 left-2 bg-black bg-opacity-50 text-white py-1 px-2 rounded">
+          ❤️
+        </div>
         <div className="flex flex-col md:flex-row">
           <img
             src={getImageUrl(movie.poster_path)}
@@ -70,6 +76,29 @@ const MovieDetail = () => {
             ></iframe>
           </div>
         )}
+        <div>
+          <h2 className="text-2xl font-semibold mt-6">¡Deja tu reseña!</h2>
+          <div className="grid grid-cols-3 gap-4">
+            <ReviewForm id={id} />
+          </div>
+        </div>
+        <div className="mt-6">
+          <h2 className="text-2xl font-semibold">Comentarios</h2>
+          {reviews.length > 0 ? (
+            reviews.map((review) => (
+              <div key={review.id} className="border-b py-4">
+                <div className="flex items-center">
+                  <div>
+                    <p className="text-gray-400">{review.texto}</p>
+                    <p className="text-gray-300">Puntuación: {review.estrellas}⭐️ </p>
+                  </div>
+                </div>
+              </div>
+            ))
+          ) : (
+            <p>No hay comentarios para esta película.</p>
+          )}
+        </div>
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 const ReviewsContext = createContext();
 const ReviewsProvider = ({ children }) => {
@@ -31,6 +31,12 @@ const ReviewsProvider = ({ children }) => {
     );
 }
   
-
+export const useReview=()=>{
+    const context = useContext(ReviewsContext);
+    if (!context) {
+        throw new Error("useReview debe estar dentro del proveedor ReviewContext");
+    }
+    return context;
+}
 
 export default ReviewsProvider;
