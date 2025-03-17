@@ -1,0 +1,121 @@
+
+Si me estoy trayendo la data importantísimo devolver success:true si la respuesta es correcta y si no false. A continuación el ejemplo completo
+
+return { success: true, data: result };
+
+FUNCIÓN COMPLETA
+
+const createProducts = async (data) => {
+    const response = await fetch(`${url}/api/products`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`
+        },
+        body: JSON.stringify(data),
+    });
+
+    if (!response.ok) {
+        const errorData = await response.json();
+        return { success: false, message: errorData.message || "Error al crear el producto" };
+    }
+
+    const result = await response.json();
+    return { success: true, data: result }; // Asegúrate de devolver el resultado correctamente
+};
+
+------------------------------------------------------------------------------
+
+SI ES UNA SOLICITUD POST Y PUT LOS HEADERS SON CONTENT TYPE Y AUTHORIZATION CON EL TOKEN SI ES NECESARIO
+
+const response = await fetch(`${url}/api/products`, {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json",
+              "Authorization": `Bearer ${token}`
+          },
+          body: JSON.stringify(data),
+      });
+
+
+
+
+---------------------------------------------------------------------------
+
+PARA EXTRAER EL TOKEN DEL INICIO DE SESION O REGISTRO
+
+HACER UN USESTATE A NULL DE TOKEN Y SET TOKEN
+ const [token, setToken] = useState(null);
+
+UNA VEZ OBTENIDA LA DATA DEL LOGIN EXITOSO HACER UN SETTOKEN CON RESPONE.TOKEN
+const login = async (data) => {
+        try {
+            const response = await fetch(`${VITE_BACKEND_URL}/api/auth/login`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (!response.ok) {
+                return { success: false, message: "Usuario o contraseña incorrectos" };
+            }
+
+            const responseData = await response.json();
+          -------------------------------
+            setToken(responseData.token);
+          -------------------------------
+            setIsAutenticated(true);
+            return { success: true, message: "Usuario logueado correctamente" };
+        } catch (error) {
+            console.log("Error en login", error);
+            return { success: false, message: "Error en el servidor" };
+        }
+    };
+
+const { token } = useAuth();
+
+
+-------------------------------------------------------------------------------
+PARA HACER UN BOTÓN QUE ME REDIRIJA A OTRA PÁGINA BORRANDO LA URL ACTUAL:
+
+<button
+                    onClick={() => navigate('/home', { replace: true })} // Usa navigate con replace
+                    className="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-200"
+                >
+                    Volver a la página de inicio
+                </button>
+
+
+------------------------------------------------------------------------------
+
+
+Saber hacer el promiseAll que me cuesta la vida
+
+
+
+
+-------------------------------------------------------------------------------
+
+npm install date-fns
+
+<p className="font-bold text-lg line-clamp-2">{format(new Date(event.date), 'dd/MM/yyyy')}</p>
+
+formato de fecha
+
+---------------------------------------------------------------------------
+Un protected route mas guapo
+
+{
+        element: <ProtectedRoute />,
+        children: [
+          {
+            path: "events/new",
+            element: <CreateEventPage />,
+          },
+          {
+            path: "events/edit/:id",
+            element: <EventForm />,
+          },
+        ],
